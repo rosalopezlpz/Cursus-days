@@ -6,13 +6,15 @@
 /*   By: rlopez-l <rlopez-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 18:18:54 by rlopez-l          #+#    #+#             */
-/*   Updated: 2022/10/15 19:41:39 by rlopez-l         ###   ########.fr       */
+/*   Updated: 2022/10/22 17:41:03 by rlopez-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stddef.h>
+# include <strings.h>
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>
@@ -27,5 +29,8 @@ int		ft_tolower(int c);
 size_t	ft_strlen(const char *s);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
+void	*ft_memset(void *b, int c, size_t len);
+void	ft_bzero(void *s, size_t n);
+int 	ft_strncmp(const char s1, const char s2, size_t n);
 
 #endif

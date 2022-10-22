@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlopez-l <rlopez-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/08 19:37:08 by rlopez-l          #+#    #+#             */
-/*   Updated: 2022/10/21 19:44:08 by rlopez-l         ###   ########.fr       */
+/*   Created: 2022/10/22 14:57:57 by rlopez-l          #+#    #+#             */
+/*   Updated: 2022/10/22 16:22:09 by rlopez-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_bzero(void *st, size_t n)
 {
-	int	i;
+	size_t	i;
 
-	i = (const char)c;
-	while (*s != i && *s != '\0')
-		s++;
-	if (*s == i)
-		return ((char *)s);
-	return (NULL);
+	i = 0;
+	while (i < n)
+	{
+		((unsigned char *)st)[i] = 0;
+		i++;
+	}
 }
 
 /*int	main(void)
 {
-	char 	*str = "Manuela";
-	int		c = 117;
+	char st[] = "unatardedemayo";
+	size_t n = 8;
 
-	printf("%s\n", ft_strchr(str,c));
+	ft_bzero(st, n);
+	printf ("Bzero me da: %s\n");
 	return (0);
 }*/
