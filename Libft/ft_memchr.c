@@ -1,40 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlopez-l <rlopez-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/22 16:24:04 by rlopez-l          #+#    #+#             */
-/*   Updated: 2022/10/24 19:38:17 by rlopez-l         ###   ########.fr       */
+/*   Created: 2022/10/24 21:02:43 by rlopez-l          #+#    #+#             */
+/*   Updated: 2022/10/24 21:47:34 by rlopez-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t	i;
 
 	i = 0;
-	while (i < n && s1[i] != '\0' && s2[i] != '\0')
+	while (i < n)
 	{
-		if (s1[i] == s2[i])
-			i++;
-		else
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		if (((unsigned char *)s)[i] == ((unsigned char )c))
+			return ((void *)(s + i));
+		i++;
 	}
-	if (n == 0 || n == i)
-		return (0);
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	return (0);
 }
 
-/*int	main(void)
+/*int main(void)
 {
-	char s1[] = "unatardedemayo";
-	char s2[] = "unatartademayo";
-	size_t n = 8;
-
-	printf("Strncmp es: %d\n", ft_strncmp(s1, s2, n));
-	return (0);
+		char *s = "barcelona";
+		
+		printf("%s",ft_memchr(s, 'c', 6));
+		return (0);
 }*/
