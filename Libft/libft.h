@@ -6,7 +6,7 @@
 /*   By: rlopez-l <rlopez-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 18:18:54 by rlopez-l          #+#    #+#             */
-/*   Updated: 2022/11/26 18:16:26 by rlopez-l         ###   ########.fr       */
+/*   Updated: 2022/12/02 22:03:56 by rlopez-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,9 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 char	*ft_itoa(int n);
 char	**ft_split(char const *s, char c);
+
+//BONUS
+
+// t_list	*ft_lstnew(void *content);
 
 #endif
