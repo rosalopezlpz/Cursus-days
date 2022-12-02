@@ -1,38 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlopez-l <rlopez-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/14 19:37:14 by rlopez-l          #+#    #+#             */
-/*   Updated: 2022/10/21 20:23:10 by rlopez-l         ###   ########.fr       */
+/*   Created: 2022/11/18 18:59:54 by rlopez-l          #+#    #+#             */
+/*   Updated: 2022/11/18 19:53:05 by rlopez-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int	i;
+	unsigned int	nb;
 
-	i = ft_strlen(s);
-	if ((char)c == '\0')
-		return ((char *)s + i);
-	while (i > 0)
+	if (n < 0)
 	{
-		i--;
-		if (s[i] == (char) c)
-			return ((char *)s + i);
+		ft_putchar_fd('-', fd);
+		nb = (unsigned int)(n * -1);
 	}
-	return (NULL);
+	else
+		nb = (unsigned int)n;
+	if (nb >= 10)
+		ft_putnbr_fd(nb / 10, fd);
+	ft_putchar_fd((char)(nb % 10 + 48), fd);
 }
-
-/*int	main(void)	
-{
-	char	*str = "Manuelua";
-	int		c = 'u';
-
-	printf("%s\n", ft_strrchr(str, c));
-	return (0);	
-}*/

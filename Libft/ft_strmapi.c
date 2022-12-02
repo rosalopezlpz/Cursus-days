@@ -6,7 +6,7 @@
 /*   By: rlopez-l <rlopez-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 15:29:41 by rlopez-l          #+#    #+#             */
-/*   Updated: 2022/11/12 17:13:42 by rlopez-l         ###   ########.fr       */
+/*   Updated: 2022/11/18 16:59:33 by rlopez-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,5 @@ char	*ft_strmapi(char const *s, char (*f) (unsigned int, char))
     return(c);
 }
   printf("%s\n", ft_strmapi(s, f));
-  return 0;
+  return (0);
 }*/

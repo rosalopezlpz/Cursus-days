@@ -6,7 +6,7 @@
 /*   By: rlopez-l <rlopez-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 19:19:24 by rlopez-l          #+#    #+#             */
-/*   Updated: 2022/11/05 18:16:35 by rlopez-l         ###   ########.fr       */
+/*   Updated: 2022/11/11 19:07:32 by rlopez-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,17 @@
   as it means that either dstsize is incorrect or 
   that dst is not a proper string).*/
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t n)
 {
 	size_t	i;
 	size_t	j;
 
 	i = 0;
 	j = 0;
-	if (dstsize <= ft_strlen(dst))
-		return (dstsize + ft_strlen(src));
+	if (n <= ft_strlen(dst))
+		return (n + ft_strlen(src));
 	i = ft_strlen(dst);
-	while (src[j] != '\0' && i + 1 < dstsize)
+	while (src[j] != '\0' && i + 1 < n)
 	{
 		dst[i] = src[j];
 		i++;

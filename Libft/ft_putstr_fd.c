@@ -1,38 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlopez-l <rlopez-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/14 19:37:14 by rlopez-l          #+#    #+#             */
-/*   Updated: 2022/10/21 20:23:10 by rlopez-l         ###   ########.fr       */
+/*   Created: 2022/11/18 17:31:53 by rlopez-l          #+#    #+#             */
+/*   Updated: 2022/11/18 18:46:56 by rlopez-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
 
-	i = ft_strlen(s);
-	if ((char)c == '\0')
-		return ((char *)s + i);
-	while (i > 0)
+	i = 0;
+	if (s == NULL)
+		return ;
+	while (s[i])
 	{
-		i--;
-		if (s[i] == (char) c)
-			return ((char *)s + i);
+		ft_putchar_fd(s[i], fd);
+		i++;
 	}
-	return (NULL);
 }
-
-/*int	main(void)	
-{
-	char	*str = "Manuelua";
-	int		c = 'u';
-
-	printf("%s\n", ft_strrchr(str, c));
-	return (0);	
-}*/

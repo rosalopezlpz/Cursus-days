@@ -6,11 +6,12 @@
 /*   By: rlopez-l <rlopez-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 20:39:32 by rlopez-l          #+#    #+#             */
-/*   Updated: 2022/11/26 18:16:04 by rlopez-l         ###   ########.fr       */
+/*   Updated: 2022/12/02 18:45:30 by rlopez-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 int	wordcount(char const *s, char c)
 {
@@ -28,6 +29,10 @@ int	wordcount(char const *s, char c)
 	return (w);
 }
 
+/*char	**freemalloc(char **solution, size_t index)
+{
+	while (index-- 
+}*/
 char	**ft_solution(char **solution, char const *s, char c)
 {
 	int	i;
@@ -64,14 +69,14 @@ char	**ft_split(char const *s, char c)
 	return (solution);
 }
 
-/*int	main(void)
+int	main(void)
 {
 	char		**array;
-	char const	s[] = "El sol de la tarde quema en la cara";
-	char		c = " ";
+	char const	s[] = "     split   this for me!!  ";
+	char		c = ' ';
 
 	printf("string: %s\n", s);
 	array = ft_split(s, c);
 	printf("result: %s\n", *ft_split(s, c));
 	return (0);
-}*/
+}
