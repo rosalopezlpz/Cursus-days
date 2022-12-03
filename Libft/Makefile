@@ -6,7 +6,7 @@
 #    By: rlopez-l <rlopez-l@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/24 12:15:44 by rlopez-l          #+#    #+#              #
-#    Updated: 2022/12/02 22:03:53 by rlopez-l         ###   ########.fr        #
+#    Updated: 2022/12/03 19:02:52 by rlopez-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,10 +27,7 @@ SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 	  ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_itoa.c \
 	  ft_split.c
 
-# SRC_BONUS = ft_lstnew.c 
-
 OBJ = $(SRC:.c=.o)
-OBJ_BONUS = $(SRC_BONUS:.c=.o)
 
 i%.o:%.c $(HEADER)
 	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@ 
@@ -40,7 +37,7 @@ i%.o:%.c $(HEADER)
 all: $(NAME)
 
 $(NAME): $(OBJ) $(HEADER)
-	ar -rcs $(NAME) $(OBJ) $(OBJ_BONUS)
+	ar -rcs $(NAME) $(OBJ)
 
 .PHONY: clean fclean all re
 

@@ -6,7 +6,7 @@
 /*   By: rlopez-l <rlopez-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 18:18:54 by rlopez-l          #+#    #+#             */
-/*   Updated: 2022/12/02 22:03:56 by rlopez-l         ###   ########.fr       */
+/*   Updated: 2022/12/03 19:02:48 by rlopez-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stddef.h>
+# include <ctype.h>
 # include <strings.h>
 # include <unistd.h>
 # include <stdlib.h>

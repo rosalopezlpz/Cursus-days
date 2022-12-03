@@ -6,14 +6,14 @@
 /*   By: rlopez-l <rlopez-l@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 20:39:32 by rlopez-l          #+#    #+#             */
-/*   Updated: 2022/12/02 22:04:12 by rlopez-l         ###   ########.fr       */
+/*   Updated: 2022/12/03 19:12:43 by rlopez-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 //#include <stdio.h>
 
-int	wordcount(char const *s, char c)
+static int	wordcount(char const *s, char c)
 {
 	int	w;
 	int	i;
@@ -29,7 +29,7 @@ int	wordcount(char const *s, char c)
 	return (w);
 }
 
-char	**freemalloc(char **solution, size_t i)
+static char	**freemalloc(char **solution, size_t i)
 {
 	while (i-- > 0)
 		free(solution[i]);
@@ -37,7 +37,7 @@ char	**freemalloc(char **solution, size_t i)
 	return (NULL);
 }
 
-char	**ft_solution(char **solution, char const *s, char c)
+static char	**ft_solution(char **solution, char const *s, char c)
 {
 	int				i;
 	unsigned int	start;
